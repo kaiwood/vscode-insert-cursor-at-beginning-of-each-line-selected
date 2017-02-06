@@ -1,24 +1,24 @@
 'use strict';
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 
-    // Use the console to output diagnostic information (console.log) and errors (console.error)
-    // This line of code will only be executed once when your extension is activated
-    console.log('Congratulations, your extension "insert-cursor-at-beginning-of-each-line-selected" is now active!');
+    let disposable = vscode.commands.registerCommand('insert-cursor-at-beginning-of-each-line-selected.insertCursors', () => {
+        let editor = vscode.window.activeTextEditor;
 
-    // The command has been defined in the package.json file
-    // Now provide the implementation of the command with  registerCommand
-    // The commandId parameter must match the command field in package.json
-    let disposable = vscode.commands.registerCommand('extension.sayHello', () => {
-        // The code you place here will be executed every time your command is executed
+        let currentPosition = editor.selection.start.character;
+        let firstLine = editor.selection.start.line;
+        let lastLine = editor.selection.end.line;
 
-        // Display a message box to the user
-        vscode.window.showInformationMessage('Hello World!');
+        let newPosition = new vscode.Position(firstLine, currentPosition);
+
+        let selections = [];
+        for (let lineNumber = firstLine; lineNumber <= lastLine; lineNumber++) {
+            let position = new vscode.Position(lineNumber, currentPosition);
+            selections.push(new vscode.Selection(position, position));
+        }
+
+        editor.selections = selections;
     });
 
     context.subscriptions.push(disposable);

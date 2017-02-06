@@ -18,7 +18,15 @@
         "commands": [{
             "command": "insert-cursor-at-beginning-of-each-line-selected.insertCursors",
             "title": "Insert Cursor at Beginning of Each Line Selected"
-        }]
+        }],
+        "keybindings": [
+            {
+                "command": "insert-cursor-at-beginning-of-each-line-selected.insertCursors",
+                "key": "shift+alt+i",
+                "mac": "shift+alt+i",
+                "when": "editorTextFocus"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",

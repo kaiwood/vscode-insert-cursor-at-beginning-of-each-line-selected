@@ -25,9 +25,3 @@ or rebind the default one:
 }
 
 ```
-
-## Release Notes
-
-### 1.0.0
-
-Initial release

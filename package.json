@@ -1,6 +1,6 @@
 {
     "name": "insert-cursor-at-beginning-of-each-line-selected",
-    "displayName": "Insert Cursor At Beginning Of Each Line Selected",
+    "displayName": "Insert Cursor at Beginning of Each Line Selected",
     "description": "Inserts multiple cursors at the beginning of each selected line – instead of inserting them at the end.",
     "version": "0.0.1",
     "publisher": "kaiwood",
@@ -11,13 +11,13 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:insert-cursor-at-beginning-of-each-line-selected.insertCursors"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
+            "command": "insert-cursor-at-beginning-of-each-line-selected.insertCursors",
+            "title": "Insert Cursor at Beginning of Each Line Selected"
         }]
     },
     "scripts": {

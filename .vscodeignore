@@ -1,9 +1,10 @@
 .vscode/**
 .vscode-test/**
-out/test/**
-test/**
+out/**
 src/**
 **/*.map
 .gitignore
+.vscode-test.mjs
+esbuild.js
+package-lock.json
 tsconfig.json
-vsc-extension-quickstart.md

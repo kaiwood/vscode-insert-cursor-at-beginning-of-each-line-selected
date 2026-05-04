@@ -6,7 +6,7 @@ This extension overwrites the shortcut for `editor.action.insertCursorAtEndOfEac
 
 ## Extension Settings
 
-If you don't like the opinionated shortcut of this extension and like to keep VSCodes default, you can either unbind the extensions one like this:
+If you don't like the opinionated shortcut of this extension and want to keep VS Code's default, you can either unbind this extension's shortcut:
 
 ```json
 {
@@ -15,7 +15,7 @@ If you don't like the opinionated shortcut of this extension and like to keep VS
 }
 ```
 
-or rebind the default one:
+Or rebind the default command:
 
 ```json
 {
@@ -26,7 +26,21 @@ or rebind the default one:
 
 ```
 
+## Development
+
+```sh
+npm install
+npm run compile
+npm test
+```
+
 ## Release Notes
+
+### Unreleased
+
+- Modernized the extension build, test, and packaging tooling for current VS Code.
+- Added integration coverage for the cursor insertion command.
+- Invoking the command without an active editor is now a no-op.
 
 ### 1.0.0
 

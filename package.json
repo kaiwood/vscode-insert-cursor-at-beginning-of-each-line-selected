@@ -4,8 +4,12 @@
     "description": "Inserts multiple cursors at the beginning of each selected line – instead of inserting them at the end.",
     "version": "1.0.0",
     "publisher": "kaiwood",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kaiwood/vscode-insert-cursor-at-beginning-of-each-line-selected.git"
+    },
     "engines": {
-        "vscode": "^1.5.0"
+        "vscode": "^1.118.0"
     },
     "categories": [
         "Other"
@@ -13,7 +17,7 @@
     "activationEvents": [
         "onCommand:insert-cursor-at-beginning-of-each-line-selected.insertCursors"
     ],
-    "main": "./out/src/extension",
+    "main": "./dist/extension.js",
     "contributes": {
         "commands": [{
             "command": "insert-cursor-at-beginning-of-each-line-selected.insertCursors",
@@ -29,16 +33,28 @@
         ]
     },
     "scripts": {
-        "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
+        "vscode:prepublish": "npm run compile",
+        "compile": "npm run check-types && npm run package",
+        "watch": "node esbuild.js --watch",
+        "check-types": "tsc --noEmit",
+        "compile-tests": "npm run compile && tsc -p ./",
+        "package": "node esbuild.js --production",
+        "test": "npm run compile-tests && vscode-test",
+        "vsce:package": "vsce package"
     },
     "devDependencies": {
-        "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
-        "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^25.6.0",
+        "@types/vscode": "^1.118.0",
+        "@vscode/test-cli": "^0.0.12",
+        "@vscode/test-electron": "^2.5.2",
+        "@vscode/vsce": "^3.9.1",
+        "esbuild": "^0.28.0",
+        "mocha": "^11.7.5",
+        "typescript": "^6.0.3"
+    },
+    "overrides": {
+        "diff": "^8.0.3",
+        "serialize-javascript": "^7.0.5"
     }
 }

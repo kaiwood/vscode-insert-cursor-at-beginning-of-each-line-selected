@@ -4,6 +4,7 @@
     "description": "Inserts multiple cursors at the beginning of each selected line – instead of inserting them at the end.",
     "version": "1.0.0",
     "publisher": "kaiwood",
+    "icon": "assets/icon.png",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/kaiwood/vscode-insert-cursor-at-beginning-of-each-line-selected.git"

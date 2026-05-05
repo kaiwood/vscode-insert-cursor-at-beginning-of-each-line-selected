@@ -1,0 +1,17 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Insert Cursor Icon</title>
+  <desc id="desc">A selected block of lines with cursors inserted at the beginning.</desc>
+  <rect width="256" height="256" rx="48" fill="#111827"/>
+  <rect x="48" y="70" width="160" height="116" rx="16" fill="#1F2937"/>
+  <rect x="64" y="88" width="128" height="26" rx="6" fill="#264F78"/>
+  <rect x="64" y="118" width="128" height="26" rx="6" fill="#264F78"/>
+  <rect x="64" y="148" width="128" height="26" rx="6" fill="#264F78"/>
+  <rect x="74" y="93" width="10" height="16" rx="3" fill="#FACC15"/>
+  <rect x="74" y="123" width="10" height="16" rx="3" fill="#FACC15"/>
+  <rect x="74" y="153" width="10" height="16" rx="3" fill="#FACC15"/>
+  <rect x="96" y="97" width="70" height="8" rx="4" fill="#D1D5DB"/>
+  <rect x="96" y="127" width="88" height="8" rx="4" fill="#D1D5DB"/>
+  <rect x="96" y="157" width="58" height="8" rx="4" fill="#D1D5DB"/>
+  <path d="M70 56H92" stroke="#FACC15" stroke-width="10" stroke-linecap="round"/>
+  <path d="M81 45V67" stroke="#FACC15" stroke-width="10" stroke-linecap="round"/>
+</svg>

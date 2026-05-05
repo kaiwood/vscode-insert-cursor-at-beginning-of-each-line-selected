@@ -8,3 +8,4 @@ src/**
 esbuild.js
 package-lock.json
 tsconfig.json
+assets/icon.svg

@@ -2,7 +2,7 @@
     "name": "insert-cursor-at-beginning-of-each-line-selected",
     "displayName": "Insert Cursor at Beginning of Each Line Selected",
     "description": "Inserts multiple cursors at the beginning of each selected line – instead of inserting them at the end.",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publisher": "kaiwood",
     "icon": "assets/icon.png",
     "repository": {
